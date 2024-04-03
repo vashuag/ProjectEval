@@ -2,6 +2,7 @@ const express = require("express"); // Express framework for Node.js
 const bodyParser = require("body-parser"); // Middleware for handling request bodies
 const db = require("./config/db"); // Connection to database
 const port = 3002; // Port number for the server to listen on
+const cors = require("cors"); // Middleware for enabling CORS
 
 require('dotenv').config(); // Load environment variables from .env file
 
@@ -14,6 +15,7 @@ const app = express();
 // Middleware to parse request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 // Route handlers for the mentor and student routes
 app.use("/mentors", mentorRoutes);

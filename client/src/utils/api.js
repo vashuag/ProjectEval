@@ -1,5 +1,5 @@
 async function searchMentor(searchQuery) {
-  const response = await fetch(`/mentors/search?q=${searchQuery}`);
+  const response = await fetch(`https://projecteval-1.onrender.com/mentors/search?q=${searchQuery}`);
 
   if(response.status === 200){
     try {
