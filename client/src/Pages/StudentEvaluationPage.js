@@ -15,6 +15,7 @@ const StudentEvaluationPage = () => {
   let mentor = localStorage.getItem("mentor");
   if (mentor) mentor = JSON.parse(mentor);
 
+
   const navigate = useNavigate();
   const params = useParams();
   const studentId = params.id;
@@ -26,6 +27,7 @@ const StudentEvaluationPage = () => {
     communication_marks: "",
     total_marks: "",
   });
+  const [loading,setLoading] = useState(false);
 
   // Function to validate marks entered by the mentor
   const validateMarks = (marks) => {
@@ -43,6 +45,7 @@ const StudentEvaluationPage = () => {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true)
   
     // Validate marks for each parameter
     if (
@@ -68,6 +71,7 @@ const StudentEvaluationPage = () => {
       communication_marks: communicationMarks,
     });
     await fetchStudentDetails();
+    setLoading(false)
   };
   
   const handleCompleteEvaluation = async () => {
@@ -200,7 +204,7 @@ const StudentEvaluationPage = () => {
           </Grid>
           <Grid container justify="center" spacing={2}>
             <Grid item>
-              <Button variant="contained" color="primary" type="submit">
+              <Button variant="contained" disabled={loading} color="primary" type="submit">
                 Submit
               </Button>
             </Grid>

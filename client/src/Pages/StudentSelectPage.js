@@ -96,7 +96,7 @@ const StudentSelectPage = () => {
   return (
     <>
       <NavigationBar />
-      <Container fluid style={{ marginTop: "-40px" }}>
+      <Container fluid>
         <Row>
           <Col md={8}>
             {message && show && (
@@ -128,7 +128,10 @@ const StudentSelectPage = () => {
                   value={searchString}
                   onChange={(e) => setSearchString(e.target.value)}
                 />
-                <Button variant="outline-success" onClick={handleStudentSearch}>
+                <Button 
+                style={{ background: "#3f51b5"}}
+                onClick={handleStudentSearch}
+                >
                   Search
                 </Button>
               </Form>
@@ -172,6 +175,7 @@ const StudentSelectPage = () => {
                     ) : (
                       <Button
                         variant="primary"
+                        style={{ background: "#3f51b5"}}
                         onClick={() => handleStudentSelect(student)}
                       >
                         Select
@@ -208,6 +212,7 @@ const StudentSelectPage = () => {
             <Button
               className="mt-4"
               variant="success"
+              style={{ background: "#f50057"}}
               onClick={handleConfirmSelection}
             >
               Confirm Selection

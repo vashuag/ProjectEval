@@ -96,7 +96,9 @@ const StudentsViewPage = () => {
   return (
     <>
       <NavigationBar />
-      <Container className="mt-3">
+      <Container className="mt-3" style={{ maxWidth: "100%", overflowX: "auto" }}>
+
+
         <ButtonGroup className="mb-3" variant="outlined">
           <Button
             color={evaluatedFilter === "all" ? "primary" : "default"}
@@ -126,7 +128,8 @@ const StudentsViewPage = () => {
             Evaluated
           </Button>
         </ButtonGroup>
-        <Table>
+        <Table >
+
           <thead>
             <tr>
               <th>Name</th>

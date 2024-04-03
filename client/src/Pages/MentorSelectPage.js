@@ -92,14 +92,14 @@ const MentorSelectPage = () => {
               <TextField
                 fullWidth
                 variant="outlined"
-                label="Search mentor"
+                placeholder="Search mentor"
                 value={searchString}
                 onChange={(e) => setSearchString(e.target.value)}
               />
               <Button
                 variant="contained"
                 color="primary"
-                style={{ marginLeft: "10px" }}
+                style={{ marginLeft: "10px",marginTop: "10px" }}
                 onClick={handleMentorSearch}
               >
                 Search
