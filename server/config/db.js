@@ -1,10 +1,12 @@
 const mysql = require('mysql');
+const dotenv = require('dotenv'); 
+dotenv.config();
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: "password"
-})
+  host: process.env.DATABASE_URI,
+  user: process.env.DATABASE_USERNAME,
+  password: process.env.DATABASE_PASSWORD
+});
 
 // Create the "dashboard" database if it doesn't already exist
 connection.query('CREATE DATABASE IF NOT EXISTS dashboard', (err) => {
