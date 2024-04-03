@@ -15,7 +15,6 @@ const StudentEvaluationPage = () => {
   let mentor = localStorage.getItem("mentor");
   if (mentor) mentor = JSON.parse(mentor);
 
-
   const navigate = useNavigate();
   const params = useParams();
   const studentId = params.id;
@@ -70,7 +69,8 @@ const StudentEvaluationPage = () => {
       presentation_marks: presentationMarks,
       communication_marks: communicationMarks,
     });
-    await fetchStudentDetails();
+    await fetchStudentDetails()
+    .then(()=>navigate(`/student-view`));
     setLoading(false)
   };
   
