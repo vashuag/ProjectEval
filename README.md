@@ -6,7 +6,7 @@
 
 This project aims to provide a complete solution for mentors to evaluate students for a semester-long project in college. The frontend is developed using React, the backend using Node.js, and MySQL for the database. The application is deployed on [Vercel](https://project-eval.vercel.app/) and [AWS](http://projecteval.s3-website-us-east-1.amazonaws.com/), with the MySQL database hosted on AWS RDS.
 
-
+# Note: Due to backend hosted on render free tier, the backend shuts down after a time, so please wait, for 1-2 minutes, and refresh the page for seeing the full Web app.
 ## Deployment
 
 •⁠  ⁠Frontend: The frontend of this application is deployed on [Vercel](https://vercel.com/). You can access the web application [here](https://project-eval.vercel.app/).<br>
