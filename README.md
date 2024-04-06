@@ -88,6 +88,9 @@ Generate a marksheet of all students for a mentor in pdf/doc or any document for
 
 <img width="807" alt="10" src="https://github.com/vashuag/ProjectEval/assets/83650895/81bed68a-d43a-4b1a-a397-a0fc14b6379b">
 
+## Database EER diagram from MySQL workbench
+<img width="459" alt="Screenshot 2024-04-06 at 12 43 05 PM" src="https://github.com/vashuag/ProjectEval/assets/83650895/6cdbface-fdca-4dd1-8d95-b6a0f130251a">
+
 
 ## Environment Variables
 •⁠  ⁠.env: Configuration file for environment variables save in server folder.
